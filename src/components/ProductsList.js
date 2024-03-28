@@ -1,17 +1,18 @@
 import React from 'react';
-import ProductItem from './ProductItem';
 import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
   return (
     <div className="product-list">
-      <h2>Products</h2>
+      <h1>Products</h1>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
             <Link to={`/products/${product.id}`}>
-              <ProductItem product={product} />
+              <h3>{product.title}</h3>
+              <p>${product.price}</p>
             </Link>
+            <button>Add to Cart</button>  {/* Functionality not implemented in this example */}
           </li>
         ))}
       </ul>

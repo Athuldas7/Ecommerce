@@ -1,16 +1,16 @@
 import React from 'react';
-import CategoryItem from './CategoryItem';
 import { Link } from 'react-router-dom';
 
 const CategoryList = ({ categories }) => {
   return (
     <div className="category-list">
-      <h2>Categories</h2>
+      <h1>Categories</h1>
       <ul>
         {categories.map((category) => (
           <li key={category.id}>
             <Link to={`/categories/${category.id}/products`}>
-              <CategoryItem category={category} />
+              {category.image && <img src={category.image} alt={category.name} />}
+              <h3>{category.name}</h3>
             </Link>
           </li>
         ))}
