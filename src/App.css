@@ -2,11 +2,81 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(163, 236, 62);
   }
+  button {
+    border-radius: 16px;
+    border: 1px solid;
+}
+button:hover {
+  background-color: #c8d4d8;
+  cursor: pointer;
+ 
+}
+.card {
+  width: 100px;
+  height: 150px;
+
+  .card-title {
+    color: black;
+   }
+   .link-heading{
+     text-decoration: none;
+   }
+}
+
+.product-list {
+  h2.mb-20 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+}
+.product-details {
+  .row {
+    margin-top: 20px;
+  }
+  button {
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    border: 1px solid;
+    color:black ;
+  }
+  button:hover {
+  background-color: #c8d4d8;
+  cursor: pointer;
+
+  }
+}
+.custom-button{
+  width: 200px; 
+  text-align: center;
+  height: 50px;
+}
+
+.header-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 3px;
   
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  
+}
+.header-button :hover {
+  background-color: #c8d4d8;
+  color: black;
+ }
+.header-button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-end {
+  margin-left: auto;
+}
+
+.custom-navbar {
+  height: 75px;
+ 
+
+}

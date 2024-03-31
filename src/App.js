@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
+import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductsList';
 import ProductDetails from './components/ProductDetails';
@@ -8,6 +9,7 @@ import UserList from './components/UsersList';
 import { getProducts } from './api/products';
 import { getCategories } from './api/categories';
 import { getUsers } from './api/users';
+import Footer from './components/footer';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -50,9 +52,9 @@ function App() {
 
   return (
     <Router>
+      <Header categories={categories} users={users} />  {/* Pass data to Header */}
       <nav>
-        <button onClick={() => window.location.href = '/categories'}>Categories</button>
-        <button onClick={() => window.location.href = '/users'}>Users</button>
+        {/* Removed redundant navigation buttons */}
       </nav>
 
       <Routes>
@@ -68,6 +70,7 @@ function App() {
         />
         <Route path="/users" element={<UserList users={users} />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

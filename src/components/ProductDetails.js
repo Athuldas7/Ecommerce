@@ -20,14 +20,22 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="product-details">
-      <h2>{product.title}</h2>
-      <img src={product.images} alt={product.title} />
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-      <button>Add to Cart</button>
+    <div className="product-details container">
+    <div className="row ">
+      <div className="col-md-6">
+        <img src={product.images} alt={product.title} className="img-fluid mt-20"  />
+      </div>
+      <div className="col-md-6 d-flex align-items-start flex-column">
+        <h2>{product.title}</h2>
+        <p>{product.description}</p>
+        <p>Price: ${product.price}</p>
+        <button className="custom-button">Add to Cart</button>
+      </div>
     </div>
+  </div>
   );
 };
+  
+
 
 export default ProductDetails;
