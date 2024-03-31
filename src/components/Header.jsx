@@ -32,17 +32,17 @@ function Header() {
                   <MDBNavbarNav className='justify-content-end'>
                       <MDBNavbarItem>
                           <MDBNavbarLink>
-                              <button className='header-button'>
-                                  <Link to="/categories">Categories</Link>
-                              </button>
+                          <Link to={`/categories`}>
+                             <button className='header-button'>Category</button>
+                          </Link>
                           </MDBNavbarLink>
                       </MDBNavbarItem>
 
                       <MDBNavbarItem>
                           <MDBNavbarLink>
-                              <button className='header-button'>
-                                  <Link to="/users">Users</Link>
-                              </button>
+                          <Link to={`/users`}>
+                             <button className='header-button'>Users</button>
+                          </Link>
                           </MDBNavbarLink>
                       </MDBNavbarItem>
 

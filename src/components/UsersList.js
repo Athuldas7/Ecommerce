@@ -1,18 +1,23 @@
 import React from 'react';
+import "./UserList.css";
 
 const UserList = ({ users }) => {
   return (
-    <div className="user-list">
-      <h1>Users</h1>
-      <ul>
+    <div>
+      <div className="heading-container container">
+        <h1>Users List</h1>
+      </div>
+      <div className='container'>
+      <div className="users-list">
         {users.map((user) => (
-          <li key={user.id}>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
+          <div className="users-container" key={user.id}>
+            <h2>{user.name}</h2>
+            <p>Email: {user.email}</p>
             {user.avatar && <img src={user.avatar} alt={user.name} />}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
+      </div>
     </div>
   );
 };

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-const ProductCard = ({ product }) => {
+export const ProductCard = ({ product }) => {
   return (
-    <div className='' >
+    <div className=''>
       <div className="card" style={{ width: '18rem', backgroundColor: '#e6e6e6' }}>
         <div className="card-body">
-          <Link to={`/products/${product.id}`}  className='link-heading'>
+          <Link to={`/products/${product.id}`} className='link-heading'> {/* Corrected syntax */}
             <h5 className="card-title">{product.title}</h5>
           </Link>
           <h6 className="card-subtitle mb-2 text-body-secondary">{product.subtitle}</h6>
@@ -24,10 +23,10 @@ const ProductCard = ({ product }) => {
 
 const ProductList = ({ products }) => {
   return (
-    <div className="product-list container ">
+    <div className="product-list container">
       <h2 className='mb-20'>Products</h2>
       <div>
-        <div className="row row-cols-4 row-cols-md-4  g-4">
+        <div className="row row-cols-4 row-cols-md-4 g-4">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

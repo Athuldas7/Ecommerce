@@ -1,0 +1,35 @@
+.category-list {
+    text-align: center;
+  }
+  
+  .title {
+    color: #333; /* Change the color of the title */
+  }
+  
+  .category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .category-item {
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+  }
+  
+  .category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Apply rounded border to the images */
+    object-fit: cover; /* Ensure all images fill their container */
+  }
+  
+  .category-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set the color of the links */
+  }
+  
+  .category-link:hover {
+    color: #555; /* Change link color on hover */
+  }

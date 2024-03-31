@@ -10,6 +10,7 @@ import { getProducts } from './api/products';
 import { getCategories } from './api/categories';
 import { getUsers } from './api/users';
 import Footer from './components/footer';
+import CategoryProductsList from './components/CategoryProductsList';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -66,7 +67,7 @@ function App() {
         />
         <Route
           path="/categories/:categoryId/products"
-          element={<ProductList products={filterProducts()} />}
+          element={<CategoryProductsList />}
         />
         <Route path="/users" element={<UserList users={users} />} />
       </Routes>
